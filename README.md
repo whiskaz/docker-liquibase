@@ -1,11 +1,24 @@
 # Dockerized Liquibase
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/ferrarimarco/liquibase.svg)](https://hub.docker.com/r/ferrarimarco/liquibase/)
+[![Docker Automated buil](https://img.shields.io/docker/automated/ferrarimarco/liquibase.svg)](https://hub.docker.com/r/ferrarimarco/liquibase/)
+
+- Master Branch: [![Build Status Master Branch](https://travis-ci.org/ferrarimarco/docker-liquibase.svg?branch=master)](https://travis-ci.org/ferrarimarco/docker-liquibase)
+- Development Branch: [![Build Status Development Branch](https://travis-ci.org/ferrarimarco/docker-liquibase.svg?branch=development)](https://travis-ci.org/ferrarimarco/docker-liquibase)
+
 This is a [Liquibase](http://www.liquibase.org) instance running in a Docker container.
 
 The following drivers have been included:
 
 - H2 JDBC 1.4.195
 - Oracle JDBC 8 12.2.0.1
+
+
+## Supported tags and respective Dockerfile links
+- `1.0.0`, `latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/1.0.0/Dockerfile)
+- `dev-latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/development/Dockerfile)
+- `master-latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/master/Dockerfile)
+
 
 ## How to run
 
