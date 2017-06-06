@@ -27,39 +27,44 @@ The following drivers have been included:
 Get the list of changesets to apply considering a database and a changelog to apply
 
 ```
-docker run --rm -it ferrarimarco/liquibase status \
+docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
+  ferrarimarco/liquibase \
   --driver=oracle.jdbc.OracleDriver \
-  --changeLogFile=/path/to/changelog/db.changelog-master.yaml
-  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME
-  --username=DB_USER
-  --password=DB_PW
+  --changeLogFile=/liquibase/changelog/changelog-name.yaml \
+  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
+  --username=DB_USER \
+  --password=DB_PW \
+  status
 ```
 
 ### Generate a Liquibase diff report
 
 ```
-docker run --rm -it ferrarimarco/liquibase diff \
+docker run --rm -it ferrarimarco/liquibase \
   --driver=oracle.jdbc.OracleDriver \
-  --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME
-  --referenceUsername=REF_DB_USER
-  --referencePassword=REF_DB_PW
-  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME
-  --username=DB_USER
-  --password=DB_PW
+  --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME \
+  --referenceUsername=REF_DB_USER \
+  --referencePassword=REF_DB_PW \
+  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
+  --username=DB_USER \
+  --password=DB_PW \
+  diff
 ```
 
 ### Generate a Liquibase diff changelog report
 
 ```
-docker run --rm -it ferrarimarco/liquibase diffChangeLog \
+docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
+  ferrarimarco/liquibase \
   --driver=oracle.jdbc.OracleDriver \
-  --changeLogFile=/path/to/changelog/db.changelog-master.yaml
-  --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME
-  --referenceUsername=REF_DB_USER
-  --referencePassword=REF_DB_PW
-  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME
-  --username=DB_USER
-  --password=DB_PW
+  --changeLogFile=/liquibase/changelog/changelog-name.yaml \
+  --referenceUrl=jdbc:oracle:thin:@REF_DB_HOST:REF_DB_PORT/REF_DB_NAME \
+  --referenceUsername=REF_DB_USER \
+  --referencePassword=REF_DB_PW \
+  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
+  --username=DB_USER \
+  --password=DB_PW \
+  diffChangeLog
 ```
 
 Note that if you change the `--changeLogFile` extension to .xml, Liquibase will generate a changelog in XML format.
@@ -67,21 +72,25 @@ Note that if you change the `--changeLogFile` extension to .xml, Liquibase will 
 ### Apply a changelog to the database
 
 ```
-docker run --rm -it ferrarimarco/liquibase update \
+docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
+  ferrarimarco/liquibase \
   --driver=oracle.jdbc.OracleDriver \
-  --changeLogFile=/path/to/changelog/db.changelog-master.yaml
-  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME
-  --username=DB_USER
-  --password=DB_PW
+  --changeLogFile=/liquibase/changelog/changelog-name.yaml \
+  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
+  --username=DB_USER \
+  --password=DB_PW \
+  update
 ```
 
 ### Generate a SQL script to update a database (considering its current status) from a changelog
 
 ```
-docker run --rm -it ferrarimarco/liquibase updateSQL \
+docker run --rm -it -v /path/to/changelog/dir/on/the/host/:/liquibase/changelog/ \
+  ferrarimarco/liquibase \
   --driver=oracle.jdbc.OracleDriver \
-  --changeLogFile=/path/to/changelog/db.changelog-master.yaml
-  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME
-  --username=DB_USER
-  --password=DB_PW
+  --changeLogFile=/liquibase/changelog/changelog-name.yaml \
+  --url=jdbc:oracle:thin:@DB_HOST:DB_PORT/DB_NAME \
+  --username=DB_USER \
+  --password=DB_PW \
+  updateSQL
 ```
