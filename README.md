@@ -8,6 +8,8 @@
 
 This is a [Liquibase](http://www.liquibase.org) instance running in a Docker container.
 
+Part of the [Open Development Environment Project](https://github.com/ferrarimarco/open-development-environment).
+
 The following drivers have been included:
 
 - H2 JDBC 1.4.195
