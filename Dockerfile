@@ -9,7 +9,7 @@ RUN apk add --update \
 
 ENV PATH $PATH:/liquibase
 
-ENV LIQUIBASE_VERSION 3.5.3
+ENV LIQUIBASE_VERSION 3.6.1
 
 RUN mkdir -p /liquibase \
     && curl -L https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${LIQUIBASE_VERSION}/liquibase-${LIQUIBASE_VERSION}-bin.tar.gz \
