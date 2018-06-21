@@ -16,8 +16,7 @@ The following drivers have been included:
 
 
 ## Supported tags and respective Dockerfile links
-- `1.0.0`, `latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/1.0.0/Dockerfile)
-- `dev-latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/development/Dockerfile)
+- `3.6.1`, `latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/3.6.1/Dockerfile)
 - `master-latest` [(Dockerfile)](https://github.com/ferrarimarco/docker-liquibase/blob/master/Dockerfile)
 
 
