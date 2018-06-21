@@ -1,10 +1,9 @@
 # Dockerized Liquibase
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/ferrarimarco/liquibase.svg)](https://hub.docker.com/r/ferrarimarco/liquibase/)
-[![Docker Automated buil](https://img.shields.io/docker/automated/ferrarimarco/liquibase.svg)](https://hub.docker.com/r/ferrarimarco/liquibase/)
+[![Docker Automated build](https://img.shields.io/docker/automated/ferrarimarco/liquibase.svg)](https://hub.docker.com/r/ferrarimarco/liquibase/)
 
-- Master Branch: [![Build Status Master Branch](https://travis-ci.org/ferrarimarco/docker-liquibase.svg?branch=master)](https://travis-ci.org/ferrarimarco/docker-liquibase)
-- Development Branch: [![Build Status Development Branch](https://travis-ci.org/ferrarimarco/docker-liquibase.svg?branch=development)](https://travis-ci.org/ferrarimarco/docker-liquibase)
+[![Build Status Master Branch](https://travis-ci.org/ferrarimarco/docker-liquibase.svg?branch=master)](https://travis-ci.org/ferrarimarco/docker-liquibase)
 
 This is a [Liquibase](http://www.liquibase.org) instance running in a Docker container.
 
