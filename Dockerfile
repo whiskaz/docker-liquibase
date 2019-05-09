@@ -18,6 +18,3 @@ RUN mkdir -p /liquibase \
     | tar xzC /liquibase
 
 COPY ./lib /liquibase/lib/
-
-ENTRYPOINT ["liquibase"]
-CMD ["--version"]
